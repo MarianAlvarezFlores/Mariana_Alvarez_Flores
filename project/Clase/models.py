@@ -27,6 +27,6 @@ class Comision (models.Model):
     def __str__(self) -> str:
         return str (self.nombre)
     
-    def mostrar_comisiones(request):
+    def mostrar_comisiones(self, request):
         comisiones = Comision.objects.all()
         return (request, 'comisiones.html', {'comisiones': comisiones})
