@@ -1,0 +1,18 @@
+{% extends 'core/base.html' %}
+
+{% block title %}  
+    Comisiones
+{% endblock %}
+
+{% block content %}  
+    {% for comision in comisiones %}  
+        <h3>{{ comision.nombre }} - {{ comision.curso }} - {{ comision.profesor }}</h3>
+        <p>Estudiantes:</p>
+        <ul>
+            {% for estudiante in comision.estudiante.all %} 
+            <li>{{ estudiante.nombre }}</li>  
+        {% endfor %} 
+    </ul>
+{% endfor %}  
+</ul>
+{% endblock %}  
