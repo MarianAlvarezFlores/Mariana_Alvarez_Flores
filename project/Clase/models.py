@@ -12,7 +12,6 @@ class Estudiante (models.Model):
     def __str__(self) -> str:
         return self.nombre
 
-
 class Profesor (models.Model):
     nombre = models.CharField (max_length=200)
 
