@@ -11,9 +11,17 @@ class Estudiante (models.Model):
     curso = models.ForeignKey (Curso, on_delete= models.SET_NULL, null= True, blank= True)
     def __str__(self) -> str:
         return self.nombre
+    
+    class Meta:
+        verbose_name="estudiante"
+        verbose_name_plural = "estudiantes"
 
 class Profesor (models.Model):
     nombre = models.CharField (max_length=200)
+
+    class Meta:
+        verbose_name="profesor/a"
+        verbose_name_plural = "profesores/as"
 
     def __str__(self) -> str:
         return self.nombre
