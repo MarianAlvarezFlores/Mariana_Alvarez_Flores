@@ -1,0 +1,15 @@
+{% extends "core/base.html" %}
+
+{% block title %}
+    Comisiones
+{% endblock title %}
+
+{% block content %}
+    <a href="{% url 'Clase:comision_create' %}">Crear nueva Comision</a>
+    {% for comision in comisiones %}
+        <p>{{ comision.nombre }} | {{ comision.curso }} | {{ comision.profesor }}</p>
+            {% for estudiante in comision.estudiante.all %}
+                <p>{{ estudiante.nombre }}</p>
+            {% endfor %}
+    {% endfor %}
+{% endblock content %}

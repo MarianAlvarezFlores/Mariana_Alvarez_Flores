@@ -1,13 +1,16 @@
-{% extends 'core/base.html' %}
+{% extends "core/base.html" %}
 
-{% block <title></title> %}  
-<h1>Página inicial</h1>
-{% endblock <title></title> %}
+{% block title %}
+    <h1>Página de inicio</h1>
+{% endblock title %}
 
 {% block content %}
-<ul>
-    <li>
-        <a href="{% url 'Clase:home' %}">Clase</a>
-    </li>
-</ul>
+    <ul>
+        <li>
+            <a href="{% url 'Clase:home' %}">Comisiones</a>
+            <a href="{% url 'Clase:estudiante_home' %}">Estudiantes</a>
+            <a href="{% url 'Clase:curso_home' %}">Cursos</a>  
+            <a href="{% url 'Clase:profesor_home' %}">Profesores</a>  
+        </li>
+    </ul>
 {% endblock content %}

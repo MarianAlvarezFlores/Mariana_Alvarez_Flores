@@ -1,0 +1,12 @@
+{% extends "core/base.html" %}
+
+{% block title %}
+    Estudiantes
+{% endblock title %}
+
+{% block content %}
+    <a href="{% url 'Clase:estudiante_create' %}">Añadir nuevo/a estudiante</a>
+    {% for estudiante in estudiantes %}
+        <p>{{ estudiante.nombre }} | {{ estudiante.comision }}</p>        
+    {% endfor %}
+{% endblock content %}

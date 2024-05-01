@@ -1,0 +1,12 @@
+{% extends "core/base.html" %}
+
+{% block title %}
+    Profesores/as
+{% endblock title %}
+
+{% block content %}
+    <a href="{% url 'Clase:profesor_create' %}">Añadir nuevo/a profesor/a</a>
+    {% for profesor in profesores %}  
+        <p>{{ profesor.nombre }} | {{ profesor.comision }}</p>
+    {% endfor %}
+{% endblock content %}

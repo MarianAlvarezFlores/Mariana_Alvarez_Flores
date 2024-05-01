@@ -1,0 +1,12 @@
+{% extends "core/base.html" %}
+
+{% block title %}
+    Cursos
+{% endblock title %}
+
+{% block content %}
+    <a href="{% url 'Clase:curso_create' %}">Añadir nuevo curso</a>
+    {% for curso in cursos %}  
+        <p>{{ curso.nombre }} | {{ curso.comision }}</p>
+    {% endfor %}
+{% endblock content %}
